@@ -1,0 +1,34 @@
+{
+  "name": "doesaiknow-apify-skills",
+  "owner": {
+    "name": "doesaiknow",
+    "url": "https://apify.com/doesaiknow"
+  },
+  "metadata": {
+    "description": "Apify Agent Skills for SEO and Amazon sellers (doesaiknow Actors)",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "apify-seo-content-gap-plan",
+      "source": "./skills/apify-seo-content-gap-plan",
+      "skills": "./",
+      "description": "Turns a competitor keyword gap into a prioritized SEO content plan. Finds the Google keywords that 1-3 competitor domains rank for where the user's site ranks lower or not at all, drops brand and off-topic terms, clusters the rest into topics, scores every cluster (gap volume x ease x intent x business fit) and writes a backlog CSV plus content briefs for the top clusters. Runs the doesaiknow Competitor Keywords Actor (gap mode) and the AI Keyword Clustering Actor on Apify. Use when the user asks what to write next, which topics competitors get traffic from that they do not, for a content gap or keyword gap analysis against named competitor domains, a content roadmap or topical map built from competitor rankings, or a ranked list of blog posts and landing pages to create. Needs competitor domains; not for backlink gaps, AI Overview tracking, rank checks, or volume lookups and clustering of a keyword list the user already has.",
+      "keywords": [
+        "content gap",
+        "keyword gap",
+        "competitor keywords",
+        "content plan",
+        "content roadmap",
+        "keyword clustering",
+        "topical map",
+        "seo backlog",
+        "content briefs",
+        "what to write",
+        "competitor analysis",
+        "pillar pages"
+      ],
+      "category": "seo"
+    }
+  ]
+}
