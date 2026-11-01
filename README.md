@@ -13,9 +13,10 @@ Antigravity, GitHub Copilot and other harnesses that read `SKILL.md`.
 | Skill | What it answers | Actors it runs | Cost |
 |---|---|---|---|
 | [`apify-seo-content-gap-plan`](skills/apify-seo-content-gap-plan/SKILL.md) | "Competitors get traffic on topics I have no pages for. What do I write, in what order?" Keyword gap → topic clusters → prioritized backlog CSV + content briefs | [Competitor Keyword Research](https://apify.com/doesaiknow/doesaiknow-competitor-keywords-apify), [AI Keyword Clustering](https://apify.com/doesaiknow/ai-keyword-clustering-tool-topical-clustering-bulk-serp) | Pay per event; the skill estimates the cost from each Actor's pricing tab before running |
+| [`apify-amazon-listing-launch-kit`](skills/apify-amazon-listing-launch-kit/SKILL.md) | "Which keywords go into my title, bullets and backend search terms, and where do I rank on launch day?" Competitor reverse ASIN → brand/off-product filter → keyword placement map + draft title and bullets from your real product facts → rank baseline | [Amazon Keyword Research](https://apify.com/doesaiknow/amazon-keyword-research-tool-volume-reverse-asin), [Amazon Listing Optimizer](https://apify.com/doesaiknow/amazon-listing-optimizer), [Amazon Rank Tracker](https://apify.com/doesaiknow/amazon-rank-tracker) | Pay per event; estimate shown before running |
+| [`apify-amazon-rank-watch`](skills/apify-amazon-rank-watch/SKILL.md) | "What changed in my Amazon rankings since last week, and who overtook me?" Persistent watchlist → per-keyword drops and gains, confirmed overtakes, exits from the organic top 10, share of the top 10 | [Amazon Rank Tracker](https://apify.com/doesaiknow/amazon-rank-tracker) | Pay per event; estimate shown before running |
 
-More skills (Amazon listing launch kit, Amazon rank watch, content refresh prioritizer,
-seasonal content calendar) are on the way.
+More skills (content refresh prioritizer, seasonal content calendar) are on the way.
 
 ## Install
 
@@ -25,7 +26,7 @@ then `apify login`) or `APIFY_TOKEN` in your environment.
 | Harness | Command |
 |---|---|
 | Any (Claude Code, Codex, Cursor, Gemini CLI, Copilot, …) | `npx skills add doesaiknow/apify-skills` |
-| Claude Code plugin marketplace | `/plugin install apify-seo-content-gap-plan --marketplace doesaiknow/apify-skills` (or `/plugin marketplace add doesaiknow/apify-skills` to browse all) |
+| Claude Code plugin marketplace | `/plugin install <skill> --marketplace doesaiknow/apify-skills` (or `/plugin marketplace add doesaiknow/apify-skills` to browse all) |
 | Codex | `$skill-installer https://github.com/doesaiknow/apify-skills/tree/main/skills/<skill>` |
 | Gemini CLI | `gemini skills install https://github.com/doesaiknow/apify-skills.git --path skills/<skill>` |
 | claude.ai / Claude Desktop | Download `<skill>.zip` from [Releases](https://github.com/doesaiknow/apify-skills/releases), then Settings → Capabilities → Skills → Upload |

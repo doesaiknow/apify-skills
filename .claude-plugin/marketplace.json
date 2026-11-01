@@ -10,6 +10,47 @@
   },
   "plugins": [
     {
+      "name": "apify-amazon-listing-launch-kit",
+      "source": "./skills/apify-amazon-listing-launch-kit",
+      "skills": "./",
+      "description": "Builds a verified keyword set and a launch-day rank baseline for an Amazon listing. Pulls the keywords 1-3 competitor ASINs rank for (reverse ASIN), adds estimated Amazon search volume for the user's own seed terms, drops competitor brands and off-product terms, maps each keyword to the title, bullets or backend search terms, drafts a title and bullets from the user's real product facts (flagged for review), and records where the user's ASIN ranks today. Runs the doesaiknow Amazon Keyword Research, Amazon Listing Optimizer and Amazon Rank Tracker Actors on Apify. Use when the user is launching or relaunching an Amazon product, asks which keywords to put in a listing title, bullets or backend, wants a Cerebro-style reverse-ASIN keyword list turned into listing copy, or wants to know where a new listing ranks before changes. Needs at least one competitor ASIN; not for ongoing rank monitoring, product prices, reviews or sales estimates.",
+      "keywords": [
+        "amazon listing",
+        "amazon keywords",
+        "reverse asin",
+        "cerebro alternative",
+        "listing optimization",
+        "amazon seo",
+        "backend search terms",
+        "product launch",
+        "amazon title",
+        "bullet points",
+        "rank baseline",
+        "keyword map"
+      ],
+      "category": "ecommerce"
+    },
+    {
+      "name": "apify-amazon-rank-watch",
+      "source": "./skills/apify-amazon-rank-watch",
+      "skills": "./",
+      "description": "Watches where an Amazon seller's ASINs rank for their keywords and reports what changed since the last check. Runs the doesaiknow Amazon Rank Tracker with a persistent watchlist ID (optionally after a reverse-ASIN lookup to pick the keywords), then reports drops and gains per keyword, which competitor ASINs overtook the user, exits from the organic top 10 and share of the top 10. The first measurement is a baseline with no change data, and the skill says so. Use when the user wants to track Amazon keyword rankings over time, asks whether their positions dropped, who overtook them, why sales from search fell, or wants a weekly or daily Amazon rank report. Scheduling (Apify Schedules, n8n) is described as an option, never created automatically. Needs at least one ASIN. Not for choosing which keywords to put in a new or existing listing, writing titles or bullets (a listing launch task), product prices, reviews or Google rankings.",
+      "keywords": [
+        "amazon rank tracker",
+        "amazon keyword ranking",
+        "rank monitoring",
+        "position tracking",
+        "share of shelf",
+        "amazon seo",
+        "ranking drop",
+        "competitor overtook",
+        "asin rank",
+        "watchlist",
+        "weekly rank report"
+      ],
+      "category": "ecommerce"
+    },
+    {
       "name": "apify-seo-content-gap-plan",
       "source": "./skills/apify-seo-content-gap-plan",
       "skills": "./",
